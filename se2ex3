@@ -1,0 +1,18 @@
+#!/usr/bin/python3
+
+import sys 
+
+file_text = sys.argv[1]
+let = sys.argv[2]
+lete = sys.argv[3]
+f = open(file_text, 'r')
+allText = f.read()
+#letters = r"\blet"
+stand_word = allText.split()
+possibilities = []
+count = 0
+for i in stand_word:
+	if i.startswith(let) and i.endswith(lete):
+		count += 1
+		possibilities.append(i)
+print(possibilities , count)
